@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffb6d2">
+<title>For Bitti 💗</title>
+<style>
+:root{--pink:#ff6fae;--deep:#b51c66;--cream:#fff5fa;--rose:#ffd4e5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#7d174b;font-family:"Trebuchet MS",system-ui,sans-serif;background:radial-gradient(ellipse at 15% 10%,#fff0f7 0,transparent 30%),radial-gradient(ellipse at 85% 25%,#ffc3dc 0,transparent 28%),linear-gradient(135deg,#ffb5d1,#ffd6e6 45%,#f8b4d0);text-align:center}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:25px 25px;z-index:0}
+main{position:relative;z-index:1;max-width:1000px;margin:auto;padding:35px 18px 65px}
+.pill{display:inline-block;background:#fff8fbcc;border:1px solid #fff;padding:8px 16px;border-radius:99px;box-shadow:0 8px 25px #c53d791a;font-size:.82rem;letter-spacing:.08em}
+h1{font-family:Georgia,serif;font-size:clamp(2.2rem,7vw,4.8rem);line-height:1.05;margin:20px auto 12px;color:#a7195d;text-shadow:0 3px 0 #fff7fb,0 10px 30px #ed5c9b35}
+h1 span{display:block;color:#f04491}
+.subtitle{font-size:clamp(1rem,2.7vw,1.25rem);max-width:620px;margin:0 auto;color:#8d2b5c;line-height:1.65}
+.hero-hearts{font-size:1.5rem;letter-spacing:12px;margin:18px 0 28px;animation:float 3s ease-in-out infinite}
+.section-title{font-family:Georgia,serif;font-size:clamp(1.5rem,4vw,2.2rem);margin:20px 0 8px}
+.hint{font-size:.95rem;margin:0 auto 28px;color:#a23868}
+.envelopes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,3vw,28px);max-width:800px;margin:0 auto 36px}
+.env-wrap{min-width:0;perspective:800px}
+.envelope{position:relative;width:100%;height:135px;border:0;background:transparent;cursor:pointer;filter:drop-shadow(0 12px 12px #a72b6025);transition:transform .25s}
+.envelope:hover{transform:translateY(-6px) rotate(-1deg)}
+.env-body{position:absolute;inset:20px 0 0;background:linear-gradient(145deg,#ffeff6,#ffb4d0);border:1px solid #fff7fb;border-radius:9px;overflow:hidden}
+.env-body:before,.env-body:after{content:"";position:absolute;bottom:-1px;width:72%;height:75%;background:#ff9fc4;border:1px solid #ffd9e8}
+.env-body:before{left:-15%;transform:rotate(34deg);border-radius:8px}
+.env-body:after{right:-15%;transform:rotate(-34deg);border-radius:8px}
+.flap{position:absolute;top:20px;left:0;width:100%;height:68px;background:linear-gradient(150deg,#ffe6f0,#ff9fc4);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .65s ease;z-index:3;filter:drop-shadow(0 3px 2px #d9578b22)}
+.seal{position:absolute;z-index:4;left:50%;top:64px;transform:translateX(-50%);font-size:27px;transition:opacity .2s}
+.env-label{position:absolute;z-index:5;bottom:8px;left:0;right:0;font-size:.83rem;font-weight:700;letter-spacing:.02em;color:#8f2455}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .seal{opacity:0}
+.envelope.open .env-body{background:linear-gradient(145deg,#fff9fc,#ffc4dc)}
+.envelope.open{transform:translateY(-3px)}
+.note{display:none;margin:-12px auto 14px;max-width:790px;padding:25px 22px 27px;border-radius:22px;background:linear-gradient(145deg,#fffafd,#fff0f7);border:1px solid #fff;box-shadow:0 18px 50px #b42c6920;animation:pop .45s cubic-bezier(.2,.8,.2,1) both}
+.note.show{display:block}
+.note .note-emoji{font-size:2rem}
+.note h3{font-family:Georgia,serif;font-size:clamp(1.45rem,4vw,2rem);margin:8px 0;color:#d52e7a}
+.note p{line-height:1.8;font-size:1.03rem;margin:0 auto;max-width:620px;color:#7f3155}
+.big-wish{margin:36px auto 0;padding:30px 18px;border-radius:28px;background:#fff4fa99;border:1px solid #ffffffbd;box-shadow:0 15px 40px #a62b5b12}
+.big-wish .bow{font-size:2.6rem}
+.big-wish h2{font-family:Georgia,serif;font-size:clamp(1.8rem,5vw,3.3rem);margin:8px 0;color:#d42c7b}
+.big-wish p{max-width:600px;margin:0 auto;line-height:1.8}
+button.replay{margin-top:22px;border:0;border-radius:99px;background:#d93480;color:white;padding:13px 22px;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 8px 20px #bf286a35}
+button.replay:hover{transform:translateY(-2px)}
+footer{padding:28px 10px 0;font-size:.88rem;color:#9a3d68}
+.floaty{position:fixed;z-index:0;pointer-events:none;animation:drift linear infinite;opacity:.75}
+.firework{position:fixed;z-index:10;pointer-events:none;width:5px;height:5px;border-radius:50%;background:#fff;box-shadow:0 0 8px 3px #fff,0 0 18px 5px #ff4e9e;animation:burst 1.25s ease-out forwards}
+.spark{position:fixed;z-index:10;pointer-events:none;font-size:20px;animation:sparkle 1.4s ease-out forwards}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes drift{0%{transform:translateY(110vh) rotate(0deg)}100%{transform:translateY(-15vh) rotate(360deg)}}
+@keyframes pop{from{opacity:0;transform:translateY(15px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes burst{0%{transform:scale(.2);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(.1);opacity:0}}
+@keyframes sparkle{0%{opacity:0;transform:translateY(10px) scale(.3) rotate(0)}20%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.4) rotate(50deg)}}
+@media(max-width:560px){main{padding:26px 13px 45px}.envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.envelope{height:125px}.note{padding:22px 16px}.env-label{font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="pill">A LITTLE BIRTHDAY MAGIC ✧</div>
+  <h1>HAPPY BIRTHDAY <span>BITTI 🫶🏼🎀💗</span></h1>
+  <p class="subtitle">A tiny pink universe, made just for you. 💗<br>May your day be as lovely, soft, and magical as you are.</p>
+  <div class="hero-hearts" aria-hidden="true">♡ 🎀 ♡ ✨ ♡</div>
+
+  <h2 class="section-title">A few little letters for you 💌</h2>
+  <p class="hint">Choose an envelope to open your surprise ✨</p>
+
+  <section class="envelopes" aria-label="Birthday letters">
+    <div class="env-wrap"><button class="envelope" aria-label="Open a birthday wish" data-note="0"><span class="env-body"></span><span class="flap"></span><span class="seal">💗</span><span class="env-label">Open me ♡</span></button></div>
+    <div class="env-wrap"><button class="envelope" aria-label="Open a little reminder" data-note="1"><span class="env-body"></span><span class="flap"></span><span class="seal">🎀</span><span class="env-label">A little note</span></button></div>
+    <div class="env-wrap"><button class="envelope" aria-label="Open a wish" data-note="2"><span class="env-body"></span><span class="flap"></span><span class="seal">🧸</span><span class="env-label">For your heart</span></button></div>
+    <div class="env-wrap"><button class="envelope" aria-label="Open a smile" data-note="3"><span class="env-body"></span><span class="flap"></span><span class="seal">🌷</span><span class="env-label">Tiny happiness</span></button></div>
+    <div class="env-wrap"><button class="envelope" aria-label="Open a final surprise" data-note="4"><span class="env-body"></span><span class="flap"></span><span class="seal">🫶🏼</span><span class="env-label">One more thing</span></button></div>
+    <div class="env-wrap"><button class="envelope" aria-label="Open a birthday sparkle" data-note="5"><span class="env-body"></span><span class="flap"></span><span class="seal">✨</span><span class="env-label">Your magic</span></button></div>
+  </section>
+
+  <section class="note" id="note" aria-live="polite">
+    <div class="note-emoji" id="noteEmoji">💌</div>
+    <h3 id="noteTitle">A little note for Bitti</h3>
+    <p id="noteText"></p>
+  </section>
+
+  <section class="big-wish">
+    <div class="bow">🎀</div>
+    <h2>HAPPY BIRTHDAY BITTI 💗</h2>
+    <p>Here's to more laughter, beautiful surprises, sweet memories, and all the little things that make you smile. Keep shining in your own lovely way. You deserve a day full of love and a year full of magic. 🫶🏼</p>
+    <button class="replay" id="celebrate">✨ Make a wish & celebrate! ✨</button>
+  </section>
+  <footer>Made with lots of pink, sparkles & love 💗 · Just for Bitti</footer>
+</main>
+<script>
+const notes=[
+ {emoji:"🎂💗",title:"It's YOUR day, Bitti!",text:"Happy Birthday to the sweetest star! I hope today brings you a million reasons to smile, the warmest hugs, and the kind of happiness that stays long after the candles are out. 🫶🏼"},
+ {emoji:"🎀🌸",title:"A little reminder",text:"Never forget how special you are. Your smile can brighten a room, your presence makes moments sweeter, and you deserve all the kindness you give to others."},
+ {emoji:"🧸💌",title:"A wish from the heart",text:"May your dreams get bigger, your worries get smaller, and every new chapter bring you something beautiful. May life surprise you in the loveliest ways."},
+ {emoji:"🌷🦋",title:"Tiny happiness list",text:"More sunsets. More silly laughs. More late-night talks. More favourite songs. More cake. More reasons to say, “life is actually so beautiful.” You deserve it all!"},
+ {emoji:"🫶🏼💞",title:"One last thing…",text:"Whatever this year brings, I hope you always find people and places that make you feel loved, understood, and completely yourself. Keep being your wonderful you."},
+ {emoji:"✨🎆",title:"Your birthday magic",text:"Close your eyes, make a little wish, and let the universe hear it. Here's to a year of happy plot twists, soft moments, brave dreams, and unforgettable memories. HAPPY BIRTHDAY, BITTI! 🎂"}
+];
+const note=document.getElementById('note');
+document.querySelectorAll('.envelope').forEach(btn=>btn.addEventListener('click',()=>{
+ const wasOpen=btn.classList.contains('open');
+ document.querySelectorAll('.envelope').forEach(b=>b.classList.remove('open'));
+ btn.classList.toggle('open',!wasOpen);
+ if(wasOpen){note.classList.remove('show');return}
+ const n=notes[Number(btn.dataset.note)];
+ document.getElementById('noteEmoji').textContent=n.emoji;
+ document.getElementById('noteTitle').textContent=n.title;
+ document.getElementById('noteText').textContent=n.text;
+ note.classList.remove('show');void note.offsetWidth;note.classList.add('show');
+ note.scrollIntoView({behavior:'smooth',block:'nearest'});
+ sparkleBurst(window.innerWidth/2,window.innerHeight*.48,22);
+}));
+function sparkleBurst(x,y,count=65){
+ const symbols=['💗','✨','💕','🎀','✦','💖','🌸'];
+ for(let i=0;i<count;i++){
+  const a=Math.random()*Math.PI*2,dist=70+Math.random()*190;
+  const el=document.createElement('span');
+  el.className=Math.random()>.55?'firework':'spark';
+  if(el.className==='spark')el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=x+'px';el.style.top=y+'px';
+  el.style.setProperty('--dx',Math.cos(a)*dist+'px');el.style.setProperty('--dy',Math.sin(a)*dist+'px');
+  if(el.className==='firework'){el.style.background=['#fff','#ff5ba5','#ffd166','#ffb6d9'][Math.floor(Math.random()*4)];el.style.boxShadow='0 0 8px 3px #fff,0 0 18px 5px #ff4e9e'}
+  document.body.appendChild(el);setTimeout(()=>el.remove(),1500);
+ }
+}
+document.getElementById('celebrate').addEventListener('click',()=>{
+ for(let i=0;i<5;i++)setTimeout(()=>sparkleBurst(Math.random()*window.innerWidth,window.innerHeight*(.18+Math.random()*.48),55),i*220);
+});
+for(let i=0;i<18;i++){
+ const el=document.createElement('div');el.className='floaty';el.textContent=['♡','✦','♥','✧','🎀'][i%5];
+ el.style.left=Math.random()*100+'vw';el.style.fontSize=(12+Math.random()*20)+'px';
+ el.style.animationDuration=(12+Math.random()*18)+'s';el.style.animationDelay=(-Math.random()*25)+'s';
+ document.body.appendChild(el);
+}
+window.addEventListener('load',()=>{setTimeout(()=>{for(let i=0;i<3;i++)setTimeout(()=>sparkleBurst(window.innerWidth*(.2+.3*i),window.innerHeight*.16,28),i*260)},350)});
+</script>
+</body>
+</html>
